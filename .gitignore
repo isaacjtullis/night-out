@@ -13,7 +13,8 @@
 !/log/.keep
 !/tmp/.keep
 .byebug_history
+# Ignore Byebug command history file.
+
 /node_modules
 /app/assets/javascripts/bundle.js
 /react/coverage
-# Ignore Byebug command history file.
