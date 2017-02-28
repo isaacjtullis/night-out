@@ -14,6 +14,18 @@
  *= require_self
  */
 
+html {
+  background-color: #00A1E4;
+}
+
 body #over-ride {
   background-color: #00A1E4;
+}
+
+.buttons {
+  text-align: center;
+  margin-top: 30px;
+}
+.input-group-button {
+  display: inline-block;
 }

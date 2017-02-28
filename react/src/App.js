@@ -79,7 +79,7 @@ class App extends Component {
     this.setState({weather: weather})
   }
   componentWillMount(){
-    this.getWeatherPosts()
+    //this.getWeatherPosts()
     //this.getMoviePosts()
   }
   handleNewZipCode(event){
@@ -103,15 +103,15 @@ class App extends Component {
   render(){
     return(
     <div>
-      <NewLocationForm handleNewZipCode={this.handleNewZipCode} handleZipCode={this.handleZipCode}/>
-      <MovieList movies={this.state.movies} />
-      <WeatherList weatherConditions={this.state.weather}/>
       <GenderButton
         genderNotice={this.state.gender}
         handleMaleClick={this.handleMaleClick}
         handleFemaleclick={this.handleFemaleclick}
         weather={this.state.weather}
       />
+      <NewLocationForm handleNewZipCode={this.handleNewZipCode} handleZipCode={this.handleZipCode}/>
+      <MovieList movies={this.state.movies} />
+      <WeatherList weatherConditions={this.state.weather}/>
     </div>
     )
   }
