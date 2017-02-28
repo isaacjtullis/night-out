@@ -22,12 +22,12 @@ const GenderButton = (props) => {
     <div className="buttons">
       <div className="male-button">
         <div className="">
-          <button type="button" onClick={props.handleMaleClick}>Male</button>
+          <button type="button" onClick={props.handleMaleClick}><i className="fa fa-male fa-3x" aria-hidden="true"></i></button>
         </div>
       </div>
       <div className="female-button">
         <div className="">
-          <button type="button" onClick={props.handleFemaleclick}>Female</button>
+          <button type="button" onClick={props.handleFemaleclick}><i className="fa fa-female fa-3x" aria-hidden="true"></i></button>
         </div>
       </div>
       <div>{whatIShouldWear}</div>

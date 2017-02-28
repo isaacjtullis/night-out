@@ -15,11 +15,11 @@
  */
 
 html {
-  background-color: #00A1E4;
+  font-family: sans-serif;
 }
 
 body #over-ride {
-  background-color: #00A1E4;
+  font-family: sans-serif;
 }
 
 .buttons {
@@ -28,14 +28,38 @@ body #over-ride {
 }
 .male-button {
   display: inline-block;
+  margin-right: 5px;
+  padding: 8px;
+  background-color: #57E2E5;
+  border-radius: 28px;
 }
 .female-button {
+  margin-left: 5px;
   display: inline-block;
+  padding: 8px;
+  border-radius: 30px;
+  background-color: #45CB85;
 }
-button {
+button:hover i.fa.fa-male.fa-3x {
+  color: white;
+}
+button:hover i.fa.fa-female.fa-3x {
+  color: white;
+}
+.male-button button {
+  background-color: #57E2E5;
+  border-radius: 28px;
+}
+.female-button button {
+  background-color: #45CB85;
+  border-radius: 28px;
+}
+
+#over-ride button {
   height: 40px;
   width: 175px;
-  background-color: #DC0073;
   font-size: 16px;
-  border: .5px solid black;
+  color: black;
+  font-family: sans-serif;
+  border: none;
 }
