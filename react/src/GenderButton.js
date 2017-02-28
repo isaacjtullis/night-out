@@ -20,12 +20,12 @@ const GenderButton = (props) => {
   }
   return(
     <div className="buttons">
-      <div className="input-group-button">
+      <div className="male-button">
         <div className="">
           <button type="button" onClick={props.handleMaleClick}>Male</button>
         </div>
       </div>
-      <div className="input-group-button">
+      <div className="female-button">
         <div className="">
           <button type="button" onClick={props.handleFemaleclick}>Female</button>
         </div>
