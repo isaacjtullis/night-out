@@ -60,7 +60,7 @@ class App extends Component {
   sortWeatherArray(information){
     let newId = information.weather.length
     let temp = information.main.temp_max
-    temp = (temp + 50) - 273.15
+    temp = (temp + 32) - 273.15
     let name = information.name
     let conditions = ''
     if(information.weather.length !== 0){

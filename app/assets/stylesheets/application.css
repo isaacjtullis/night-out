@@ -90,3 +90,17 @@ button:hover i.fa.fa-female.fa-3x {
   border-bottom: 1px solid black;
   outline: none;
 }
+
+.search-feature{
+  text-align: center;
+  margin-top: 50px;
+}
+
+.hide{
+  display: none;
+}
+
+.movies {
+  display: block;
+  text-align: center;
+}
