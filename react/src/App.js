@@ -17,6 +17,8 @@ class App extends Component {
     this.handleNewZipCode = this.handleNewZipCode.bind(this)
     this.handleZipCode = this.handleZipCode.bind(this)
     this.sortWeatherArray = this.sortWeatherArray.bind(this)
+    this.handleMaleClick = this.handleMaleClick.bind(this)
+    this.handleFemaleclick = this.handleFemaleclick.bind(this)
   }
 
   getMoviePosts(zipCode){
@@ -58,7 +60,7 @@ class App extends Component {
   sortWeatherArray(information){
     let newId = information.weather.length
     let temp = information.main.temp_max
-    temp = (temp + 32) - 273.15
+    temp = (temp + 50) - 273.15
     let name = information.name
     let conditions = ''
     if(information.weather.length !== 0){
@@ -77,7 +79,7 @@ class App extends Component {
     this.setState({weather: weather})
   }
   componentWillMount(){
-    //this.getWeatherPosts()
+    this.getWeatherPosts()
     //this.getMoviePosts()
   }
   handleNewZipCode(event){
@@ -90,6 +92,13 @@ class App extends Component {
       this.getWeatherPosts(this.state.areaCode)
       this.getMoviePosts(this.state.areaCode)
   }
+  handleFemaleclick(){
+    this.setState({gender: "female"})
+
+  }
+  handleMaleClick() {
+    this.setState({gender: "male"})
+  }
 
   render(){
     return(
@@ -97,7 +106,12 @@ class App extends Component {
       <NewLocationForm handleNewZipCode={this.handleNewZipCode} handleZipCode={this.handleZipCode}/>
       <MovieList movies={this.state.movies} />
       <WeatherList weatherConditions={this.state.weather}/>
-      <GenderButton gender={this.state.gender}/>
+      <GenderButton
+        genderNotice={this.state.gender}
+        handleMaleClick={this.handleMaleClick}
+        handleFemaleclick={this.handleFemaleclick}
+        weather={this.state.weather}
+      />
     </div>
     )
   }
