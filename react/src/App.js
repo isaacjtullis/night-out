@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import MovieList from './MovieList.js';
 import NewLocationForm from './NewLocationForm.js';
 import WeatherList from './WeatherList.js';
+import GenderButton from './GenderButton.js';
 //import api from './test/api.js';
 
 class App extends Component {
@@ -10,7 +11,8 @@ class App extends Component {
     this.state = {
       weather: [],
       movies: [],
-      areaCode: 64137
+      areaCode: 64137,
+      gender: ''
     }
     this.handleNewZipCode = this.handleNewZipCode.bind(this)
     this.handleZipCode = this.handleZipCode.bind(this)
@@ -75,8 +77,8 @@ class App extends Component {
     this.setState({weather: weather})
   }
   componentWillMount(){
-    this.getWeatherPosts()
-    this.getMoviePosts()
+    //this.getWeatherPosts()
+    //this.getMoviePosts()
   }
   handleNewZipCode(event){
     let newZipCode = event.target.value
@@ -90,12 +92,12 @@ class App extends Component {
   }
 
   render(){
-    console.log(this.state.areaCode)
     return(
     <div>
       <NewLocationForm handleNewZipCode={this.handleNewZipCode} handleZipCode={this.handleZipCode}/>
       <MovieList movies={this.state.movies} />
       <WeatherList weatherConditions={this.state.weather}/>
+      <GenderButton gender={this.state.gender}/>
     </div>
     )
   }
