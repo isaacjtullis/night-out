@@ -18,9 +18,8 @@ const GenderButton = (props) => {
   } else if (props.genderNotice === 'female' && weather < 90) {
     whatIShouldWear = "http://www.harpersbazaar.com/summer-fashion/"
   }
-  debugger
   return(
-    <div>
+    <div className="buttons">
       <div className="input-group-button">
         <div className="">
           <button type="button" onClick={props.handleMaleClick}>Male</button>
