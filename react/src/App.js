@@ -109,9 +109,9 @@ class App extends Component {
         handleFemaleclick={this.handleFemaleclick}
         weather={this.state.weather}
       />
+      <WeatherList weatherConditions={this.state.weather}/>
       <NewLocationForm handleNewZipCode={this.handleNewZipCode} handleZipCode={this.handleZipCode}/>
       <MovieList movies={this.state.movies} />
-      <WeatherList weatherConditions={this.state.weather}/>
     </div>
     )
   }

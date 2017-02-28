@@ -104,3 +104,7 @@ button:hover i.fa.fa-female.fa-3x {
   display: block;
   text-align: center;
 }
+
+.current-weather {
+  text-align: center;
+}
