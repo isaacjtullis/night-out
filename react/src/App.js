@@ -11,7 +11,7 @@ class App extends Component {
     this.state = {
       weather: [],
       movies: [],
-      areaCode: 64137,
+      areaCode: null,
       gender: ''
     }
     this.handleNewZipCode = this.handleNewZipCode.bind(this)
@@ -89,8 +89,8 @@ class App extends Component {
     })
   }
   componentWillMount(){
-    //this.getWeatherPosts()
-    //this.getMoviePosts()
+    this.getWeatherPosts()
+    this.getMoviePosts()
   }
   handleNewZipCode(event){
     let newZipCode = event.target.value
@@ -111,6 +111,7 @@ class App extends Component {
   }
 
   render(){
+    //debugger
     return(
     <div>
       <GenderButton
