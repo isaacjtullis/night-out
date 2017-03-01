@@ -105,6 +105,23 @@ button:hover i.fa.fa-female.fa-3x {
   text-align: center;
 }
 
+#over-ride .movie-description .col-md-8 {
+  display: block;
+  text-align: center;
+  margin-left: 220px;
+  color: #EE6352;
+}
+
 .current-weather {
   text-align: center;
+}
+
+.clothing-ideas {
+  margin-top: 30px;
+}
+
+#over-ride .clothing-ideas a {
+  text-decoration: none;
+  font-size: 18px;
+  font-family: sans-serif;
 }
