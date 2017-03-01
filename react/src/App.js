@@ -78,6 +78,16 @@ class App extends Component {
     let weather = [currentWeather]
     this.setState({weather: weather})
   }
+  sortMovieArray(info){
+    let showtimes
+    let movies = info.map(movie=>{
+      showtimes = movie.showtimes
+    })
+    let theatre
+    let showtime = showtimes.map(showtime=>{
+      theatre = showtime.theatre.name
+    })
+  }
   componentWillMount(){
     //this.getWeatherPosts()
     //this.getMoviePosts()

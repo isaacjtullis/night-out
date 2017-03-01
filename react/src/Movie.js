@@ -7,7 +7,8 @@ const Movie = (props) => {
       movieDetails =
         <div className="col-md-8" onClick={props.handleClick}>
           <h4>{props.overview}</h4>
-          <p>Rating:</p>
+          <p>Closest Theatre: {props.theatre}</p>
+          <p>Rating: {props.ratings[0].code}</p>
         </div>;
     }
     return movieDetails;

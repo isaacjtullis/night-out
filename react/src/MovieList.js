@@ -52,14 +52,21 @@ class MovieList extends React.Component{
         switchDisplay = "hide"
       }
     }
-
     let searchTextDescription = "Search Here!"
+    let showtimes
+    let theatre
+    let ratings
     let movies = filteredMovies.map(movie=>{
+      showtimes = movie.showtimes
+      ratings = movie.ratings
       let onMovieClick = () => this.handleClick(movie.rootId);
       let selected;
       if(movie.rootId === this.state.selectedMovie){
         selected = true
       }
+      showtimes.map(showtime=>{
+        theatre = showtime.theatre.name
+      })
       return(
         <Movie
           key={movie.rootId}
@@ -67,6 +74,8 @@ class MovieList extends React.Component{
           overview={movie.shortDescription}
           selected={selected}
           handleClick={onMovieClick}
+          theatre={theatre}
+          ratings={ratings}
         />
       )
     })
