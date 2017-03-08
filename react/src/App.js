@@ -20,7 +20,7 @@ class App extends Component {
     this.handleMaleClick = this.handleMaleClick.bind(this)
     this.handleFemaleclick = this.handleFemaleclick.bind(this)
   }
-
+//this is a test
   getMoviePosts(zipCode){
     fetch(`http://data.tmsapi.com/v1.1/movies/showings?startDate=2017-02-28&zip=${this.state.areaCode}&api_key=pjeqcvh9brrqsvp4x5ph7k8g`)
       .then(res=>{
